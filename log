@@ -1,0 +1,11 @@
+- Creazione directory repository (WorkflowTest)
+- Scaricamento da GaiaGPS (Piella, 7 giugno 2023: alcuni punti, un tracciato) nella directory repository. Da "Saved Items" selezionare la registrazione e nella finestra track scorrere in fondo, Export->GeoJSON, rinomino "gaiagps.json
+- gaiasplit: ne approfitto per scaricare le foto con wget (circa 6MB ciascuna). (con wget -O foto1.jpg https://www.gaiagps.com/api/objects/photo/...)
+- riduco di dimensione le immagini (con imagemagick "mogrify -resize 640x640 -quality 50 foto1.jpg") dimensione ~120KB (diversa da quella osservata ieri...)
+- salvo come percorso-gaiasplit.geojson
+- off: Visualizzazione con titoli, ok. Ridefinisco un POI come Sito. I POI e il percorso sono già ben compilati, il sito deve essere compilato. Salvataggio come geojson (off.geojson) e umap.
+- visualizzazione di prova su umap (OK)
+- Dimensione del repo: 716KB
+- creazione del repo: wftest (uso ssh)
+- inizializzazione github directory repository (secondo istruzioni) e "git add *"
+- 
