@@ -119,3 +119,9 @@ I "fine-grained PAT" per GitHub funzionano e danno accesso ad un singolo reposit
 
 Token solo per questo repo:
 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
+
+Il collaboratore fa login su github (deve avere un account) e cerca il repository che deve modificare (ad esempio
+cercando "prin-underlandscape/wftest". Nella casella fork chiede la creazione di un nuovo fork: a questo punto
+viene creato un nuovo repo nell'archivio del collaboratore, che questo può scaricare sul suo PC e modificare
+con i tool Off. Alla fine esegue il commit, torna alla pagina GitHub del suo fork e chiede la creazione di una
+pull request.
