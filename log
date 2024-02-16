@@ -1,11 +1,116 @@
 - Creazione directory repository (WorkflowTest)
 - Scaricamento da GaiaGPS (Piella, 7 giugno 2023: alcuni punti, un tracciato) nella directory repository. Da "Saved Items" selezionare la registrazione e nella finestra track scorrere in fondo, Export->GeoJSON, rinomino "gaiagps.json
 - gaiasplit: ne approfitto per scaricare le foto con wget (circa 6MB ciascuna). (con wget -O foto1.jpg https://www.gaiagps.com/api/objects/photo/...)
-- riduco di dimensione le immagini (con imagemagick "mogrify -resize 640x640 -quality 50 foto1.jpg") dimensione ~120KB (diversa da quella osservata ieri...)
+- riduco di dimensione le immagini (con imagemagick "mogrify -resize 640x640 -quality 50 foto1.jpg") dimensione ~120KB (diversa da quella osservata ieri...). Update: bisogna mettere opzione -strip per toglere commenti e varie, circa 60K!
 - salvo come percorso-gaiasplit.geojson
 - off: Visualizzazione con titoli, ok. Ridefinisco un POI come Sito. I POI e il percorso sono già ben compilati, il sito deve essere compilato. Salvataggio come geojson (off.geojson) e umap.
 - visualizzazione di prova su umap (OK)
 - Dimensione del repo: 716KB
 - creazione del repo: wftest (uso ssh)
-- inizializzazione github directory repository (secondo istruzioni) e "git add *"
-- 
+- inizializzazione github directory repository (secondo istruzioni) e "git add *" e commit
+- devo modificare origin per abilitare la mia chiave ssh (problema da risolvere con le altre credenziali
+- git push -> ok
+
+==== Contenuto exif di una foto GaiaGPS (dopo compressione con convert -strip)===
+ExifTool Version Number         : 12.40
+File Name                       : prova.jpg
+Directory                       : immagini
+File Size                       : 158 KiB
+File Modification Date/Time     : 2024:02:16 14:25:59+01:00
+File Access Date/Time           : 2024:02:16 14:28:36+01:00
+File Inode Change Date/Time     : 2024:02:16 14:25:59+01:00
+File Permissions                : -rw-rw-r--
+File Type                       : JPEG
+File Type Extension             : jpg
+MIME Type                       : image/jpeg
+JFIF Version                    : 1.01
+Exif Byte Order                 : Big-endian (Motorola, MM)
+Make                            : HUAWEI
+Camera Model Name               : FIG-LX1
+Orientation                     : Unknown (0)
+X Resolution                    : 72
+Y Resolution                    : 72
+Resolution Unit                 : inches
+Software                        : FIG-LX1 9.1.0.115(C55E5R1P2)
+Modify Date                     : 2023:06:07 12:18:13
+Y Cb Cr Positioning             : Centered
+Document Name                   : 
+Exposure Time                   : 1/33
+F Number                        : 2.2
+Exposure Program                : Program AE
+ISO                             : 200
+Exif Version                    : 0210
+Date/Time Original              : 2023:06:07 12:18:13
+Create Date                     : 2023:06:07 12:18:13
+Components Configuration        : Y, Cb, Cr, -
+Compressed Bits Per Pixel       : 0.95
+Shutter Speed Value             : 1/999963365
+Aperture Value                  : 2.2
+Brightness Value                : 0
+Exposure Compensation           : 0
+Max Aperture Value              : 2.2
+Metering Mode                   : Multi-segment
+Light Source                    : Daylight
+Flash                           : Auto, Did not fire
+Focal Length                    : 3.5 mm
+Warning                         : [minor] Unrecognized MakerNotes
+Maker Note Unknown Text         : ##**nor
+Sub Sec Time                    : 873848
+Sub Sec Time Original           : 873848
+Sub Sec Time Digitized          : 873848
+Flashpix Version                : 0100
+Color Space                     : sRGB
+Exif Image Width                : 4160
+Exif Image Height               : 3120
+Interoperability Index          : R98 - DCF basic file (sRGB)
+Interoperability Version        : 0100
+Sensing Method                  : One-chip color area
+File Source                     : Digital Camera
+Scene Type                      : Directly photographed
+Custom Rendered                 : Custom
+Exposure Mode                   : Auto
+White Balance                   : Auto
+Digital Zoom Ratio              : 1
+Focal Length In 35mm Format     : 26 mm
+Scene Capture Type              : Standard
+Gain Control                    : None
+Contrast                        : Normal
+Saturation                      : Normal
+Sharpness                       : Normal
+Subject Distance Range          : Unknown
+GPS Version ID                  : 2.2.0.0
+GPS Latitude Ref                : North
+GPS Longitude Ref               : East
+GPS Altitude Ref                : Above Sea Level
+GPS Time Stamp                  : 10:18:12
+GPS Processing Method           : GPS
+GPS Date Stamp                  : 2023:06:07
+Compression                     : JPEG (old-style)
+Thumbnail Offset                : 8894
+Thumbnail Length                : 49760
+Image Width                     : 640
+Image Height                    : 480
+Encoding Process                : Baseline DCT, Huffman coding
+Bits Per Sample                 : 8
+Color Components                : 3
+Y Cb Cr Sub Sampling            : YCbCr4:2:0 (2 2)
+Aperture                        : 2.2
+Image Size                      : 640x480
+Megapixels                      : 0.307
+Scale Factor To 35 mm Equivalent: 7.5
+Shutter Speed                   : 1/33
+Create Date                     : 2023:06:07 12:18:13.873848
+Date/Time Original              : 2023:06:07 12:18:13.873848
+Modify Date                     : 2023:06:07 12:18:13.873848
+Thumbnail Image                 : (Binary data 49760 bytes, use -b option to extract)
+GPS Altitude                    : 448.1 m Above Sea Level
+GPS Date/Time                   : 2023:06:07 10:18:12Z
+GPS Latitude                    : 44 deg 2' 9.24" N
+GPS Longitude                   : 10 deg 41' 3.12" E
+Circle Of Confusion             : 0.004 mm
+Field Of View                   : 69.4 deg
+Focal Length                    : 3.5 mm (35 mm equivalent: 26.0 mm)
+GPS Position                    : 44 deg 2' 9.24" N, 10 deg 41' 3.12" E
+Hyperfocal Distance             : 1.36 m
+Light Value                     : 6.3
+====
