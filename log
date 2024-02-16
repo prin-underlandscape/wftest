@@ -115,3 +115,7 @@ Hyperfocal Distance             : 1.36 m
 Light Value                     : 6.3
 ====
 
+I "fine-grained PAT" per GitHub funzionano e danno accesso ad un singolo repository. Per ottenere il toke si possono settare tutte le permissions e funziona. NOn sembra necessario (e neanche facile) limitare le permission considerando che il curatore può fare tutto.
+
+Token solo per questo repo:
+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
