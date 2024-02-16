@@ -125,3 +125,7 @@ cercando "prin-underlandscape/wftest". Nella casella fork chiede la creazione di
 viene creato un nuovo repo nell'archivio del collaboratore, che questo può scaricare sul suo PC e modificare
 con i tool Off. Alla fine esegue il commit, torna alla pagina GitHub del suo fork e chiede la creazione di una
 pull request.
+L'utente che gestisce il repository accetta la pull request e fa il merge. Difficile (impossibile) che non sia
+l'amministratore dell'account ad accettare la pull request, quindi i ruoli sono due, amministratore di
+prin-underlandscape e collaboratore che invia la pull- request. Ma nulla vieta che il collaboratore subappalti
+ad un ulteriore collaboratore con un fork del fork. Ma non sembra pratico.
